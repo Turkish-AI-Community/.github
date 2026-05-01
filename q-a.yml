@@ -1,43 +1,34 @@
-name: "❓ Soru & Cevap"
+name: "🙏 Soru & Cevap (Q&A)"
 description: "Teknik bir konuda soru sorun veya yardım isteyin."
-title: "[SORU]: "
+title: "[Q&A]: "
 labels: ["question"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        ### Turkish AI Community - Soru Sorma Formu
-        Lütfen sorunuzu detaylandırırken topluluk kurallarına uyunuz.
   - type: textarea
-    id: problem-description
+    id: question
     attributes:
-      label: "Sorununuz nedir?"
-      description: "Ne yapmak istiyorsunuz ve nerede takıldınız?"
-      placeholder: "Örn: Llama-3 modelini fine-tune ederken CUDA hatası alıyorum..."
+      label: "Sorunuz Nedir?"
+      description: "Lütfen sorunuzu net bir şekilde açıklayın."
+      placeholder: "Örn: Model eğitimi sırasında 'RuntimeError: CUDA out of memory' alıyorum..."
     validations:
       required: true
   - type: textarea
-    id: attempted-solutions
+    id: context
     attributes:
-      label: "Neleri denediniz?"
-      description: "Çözmek için hangi adımları attınız?"
-      placeholder: "Örn: Kütüphaneyi güncelledim, batch size'ı düşürdüm..."
-    validations:
-      required: true
+      label: "Bağlam ve Denemeler"
+      description: "Hangi kütüphaneleri kullanıyorsunuz ve sorunu çözmek için ne denediniz?"
+      placeholder: "PyTorch 2.1 kullanıyorum. Batch size değerini düşürmeyi denedim ama..."
   - type: textarea
-    id: logs-and-code
+    id: logs
     attributes:
-      label: "Hata Mesajları ve Kod Blokları"
-      description: "Lütfen hata mesajlarını (logs) ve ilgili kod parçalarını buraya ekleyin."
-      placeholder: "```python \n # Kodunuzu buraya yapıştırın \n ```"
+      label: "Kod ve Hata Logları"
+      description: "İlgili kod parçalarını ve hata çıktılarını buraya ekleyin."
+      placeholder: "```python \n # Kodunuzu buraya yazın \n ```"
   - type: checkboxes
-    id: checklist
+    id: compliance
     attributes:
-      label: "Kurallar ve Onay"
+      label: "Pro Tip & Kurallar"
       options:
-        - label: "Önceki tartışmalarda arama yaptım."
+        - label: "Teknik terimlerde (Inference, Weights, Tokenizer vb.) orijinal terminolojiyi kullandım."
           required: true
-        - label: "Teknik terimlerde (Inference, Weights vb.) orijinal terminolojiyi kullandım."
-          required: true
-        - label: "Topluluk kurallarını okudum ve kabul ediyorum."
+        - label: "Topluluk kurallarını okudum ve bu gönderinin kurallara uygun olduğunu onaylıyorum."
           required: true
