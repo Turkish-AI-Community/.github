@@ -1,0 +1,43 @@
+name: "Q&A"
+description: "Teknik bir konuda soru sorun veya yardım isteyin."
+title: "[SORU]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Turkish AI Community - Soru Sorma Formu
+        Lütfen sorunuzu detaylandırırken topluluk kurallarına uyunuz.
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: "Sorununuz nedir?"
+      description: "Ne yapmak istiyorsunuz ve nerede takıldınız?"
+      placeholder: "Örn: Llama-3 modelini fine-tune ederken CUDA hatası alıyorum..."
+    validations:
+      required: true
+  - type: textarea
+    id: attempted-solutions
+    attributes:
+      label: "Neleri denediniz?"
+      description: "Çözmek için hangi adımları attınız?"
+      placeholder: "Örn: Kütüphaneyi güncelledim, batch size'ı düşürdüm..."
+    validations:
+      required: true
+  - type: textarea
+    id: logs-and-code
+    attributes:
+      label: "Hata Mesajları ve Kod Blokları"
+      description: "Lütfen hata mesajlarını (logs) ve ilgili kod parçalarını buraya ekleyin."
+      placeholder: "```python \n # Kodunuzu buraya yapıştırın \n ```"
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: "Kurallar ve Onay"
+      options:
+        - label: "Önceki tartışmalarda arama yaptım."
+          required: true
+        - label: "Teknik terimlerde (Inference, Weights vb.) orijinal terminolojiyi kullandım."
+          required: true
+        - label: "Topluluk kurallarını okudum ve kabul ediyorum."
+          required: true
