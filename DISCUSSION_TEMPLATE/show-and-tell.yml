@@ -1,0 +1,25 @@
+name: "🙌 Proje Sergile (Show and tell)"
+description: "Yaptığınız bir projeyi, yazdığınız bir makaleyi veya demoyu paylaşın."
+title: "[Showcase]: "
+body:
+  - type: textarea
+    id: project-info
+    attributes:
+      label: "Proje Hakkında Bilgi"
+      description: "Projeniz ne işe yarar? Hangi teknolojileri kullandınız?"
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: "Proje Linki (Opsiyonel)"
+      placeholder: "https://github.com/..."
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: "Onay"
+      options:
+        - label: "Bu projenin bana ait olduğunu veya paylaşma yetkim olduğunu onaylıyorum."
+          required: true
+        - label: "Spam içermediğini ve topluluğa faydalı olduğunu onaylıyorum."
+          required: true
