@@ -1,0 +1,44 @@
+name: "📢 Resmi Duyuru (Announcements)"
+description: "Sadece Admin ve Maintainer'lar için resmi topluluk duyurusu şablonu."
+title: "[DUYURU]: "
+labels: ["announcement", "official"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🚨 Yönetici Bilgilendirmesi
+        Bu şablon, topluluk genelindeki duyuruların standart bir formatta olmasını sağlar. Lütfen aşağıdaki alanları eksiksiz doldurun.
+  - type: textarea
+    id: summary
+    attributes:
+      label: "Özet (TL;DR)"
+      description: "Duyurunun en önemli kısmını 1-2 cümle ile özetleyin."
+      placeholder: "Örn: Turkish AI Community artık Discord üzerinde! İşte detaylar..."
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: "Duyuru Detayları"
+      description: "Tüm detayları, tarihleri veya linkleri buraya ekleyin."
+      placeholder: "Topluluğumuz için heyecan verici bir gelişme var..."
+    validations:
+      required: true
+  - type: checkboxes
+    id: admin-checks
+    attributes:
+      label: "Yayınlama Öncesi Kontrol Listesi"
+      options:
+        - label: "Duyuru metnini hem Türkçe hem de İngilizce (veya karma) hazırladım."
+          required: true
+        - label: "Teknik terimleri (Pro Tip) orijinal haliyle bıraktım (örn. Fine-tuning, LLM)."
+          required: true
+        - label: "Kullanılan görsellerin veya linklerin erişilebilir olduğundan eminim."
+          required: true
+        - label: "Bu duyurunun topluluk vizyonuna uygun olduğunu onaylıyorum."
+          required: true
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        *Bu duyuru paylaşıldığında tüm topluluk üyelerine bildirim gidebilir. Lütfen içeriği son bir kez kontrol edin.*
