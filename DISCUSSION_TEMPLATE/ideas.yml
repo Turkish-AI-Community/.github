@@ -1,0 +1,23 @@
+name: "💡 Fikir Önerisi"
+description: "Topluluk veya projeler için yeni bir fikriniz mi var?"
+title: "[Idea]: "
+body:
+  - type: textarea
+    id: idea-description
+    attributes:
+      label: "Fikriniz Nedir?"
+      description: "Önerdiğiniz değişikliği veya yeni fikri açıklayın."
+    validations:
+      required: true
+  - type: textarea
+    id: benefit
+    attributes:
+      label: "Bu fikir topluluğa ne katar?"
+      description: "Neden bu fikrin uygulanması gerektiğini düşünüyorsunuz?"
+  - type: checkboxes
+    id: compliance
+    attributes:
+      label: "Kurallar"
+      options:
+        - label: "Fikrimin uygulanabilir ve kurallara uygun olduğunu onaylıyorum."
+          required: true
